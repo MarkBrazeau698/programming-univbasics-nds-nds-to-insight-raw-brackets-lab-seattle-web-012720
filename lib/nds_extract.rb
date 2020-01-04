@@ -38,6 +38,7 @@ def directors_totals(nds)
       #add that movies gross to the total
       movie = nds[inner_index]
       gross = movie[:worldwide_gross]
+      binding.pry
       totallity = gross.sum
       inner_index += 1
     end
