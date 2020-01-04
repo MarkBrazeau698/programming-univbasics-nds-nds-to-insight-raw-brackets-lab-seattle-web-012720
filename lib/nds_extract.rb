@@ -18,5 +18,38 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-  nil
+  
+  
+  hash = {}
+  element_index = 0
+  
+  while element_index < nds.count do
+    #set director var 
+    #set a name var 
+    #pull all movies for current director
+    #iterate over movies and sum gross
+    direct = nds[element_index]
+    name = direct[:name]
+    movies = direct[:movies]
+    inner_index = 0
+    while inner_index < movies.count do
+      #set a movie var
+      #set that movies gross var
+      #add that movies gross to the total
+      movie = nds[inner_index]
+      gross = movie[:worldwide_gross]
+      totallity = gross.sum
+      inner_index += 1
+    end
+    hash << [direct: totallity]
+     element_index += 1
+    
+  end
+   hash
+  
 end
+
+
+
+
+
