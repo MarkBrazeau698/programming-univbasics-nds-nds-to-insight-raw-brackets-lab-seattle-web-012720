@@ -32,18 +32,18 @@ def directors_totals(nds)
     name = direct[:name]
     movies = direct[:movies]
     inner_index = 0
+    totallity = 0
     while inner_index < movies.count do
       #set a movie var
       #set that movies gross var
       #add that movies gross to the total
-      movie = nds[inner_index]
+      movie = movies[inner_index]
       gross = movie[:worldwide_gross]
-      binding.pry
-      totallity = gross.sum
       inner_index += 1
+      totallity += gross
     end
     element_index += 1
-    hash << [direct: totallity]
+    hash[name] = totallity
      
   end
    hash
