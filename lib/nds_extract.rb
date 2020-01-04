@@ -41,7 +41,7 @@ def directors_totals(nds)
       totallity = gross.sum
       inner_index += 1
     end
-    
+    element_index += 1
     hash << [direct: totallity]
      
   end
