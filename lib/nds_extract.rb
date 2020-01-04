@@ -43,7 +43,6 @@ def directors_totals(nds)
     end
     hash << [direct: totallity]
      element_index += 1
-    
   end
    hash
   
